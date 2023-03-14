@@ -6,7 +6,7 @@ public class Course {
     private Textbook textbook;
 
     public Course(String courseName, Instructor instructor, Textbook textbook){
-        setCourseName(courseName);
+        this.courseName = courseName;
         this.instructor = instructor; // aggregation
         this.textbook = textbook;   // aggregation
     }

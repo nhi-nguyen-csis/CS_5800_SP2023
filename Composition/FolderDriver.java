@@ -2,8 +2,7 @@ package Composition;
 
 public class FolderDriver {
 
-    public static void main(String[] args) {
-
+    public static void run() {
         // Create the root folder
         Folder rootFolder = new Folder("php demo 1");
 
@@ -48,7 +47,6 @@ public class FolderDriver {
 
         // -------------- DELETE PUBLIC FOLDER --------------
         deleteFolder(rootFolder, sourceFolder, publicFolder);
-
     }
 
     public static void deleteFolder(Folder rootFolder, Folder parentFolder, Folder childFolder){

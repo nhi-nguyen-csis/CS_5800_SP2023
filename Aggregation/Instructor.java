@@ -6,9 +6,9 @@ public class Instructor {
     private String officeNumber;
 
     public Instructor(String firstName, String lastName, String officeNumber){
-        setFirstName(firstName);
-        setLastName(lastName);
-        setOfficeNumber(officeNumber);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.officeNumber = officeNumber;
     }
 
     public String getInstructorInfo(){

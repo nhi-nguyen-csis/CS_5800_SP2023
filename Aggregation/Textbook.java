@@ -6,9 +6,9 @@ public class Textbook {
     private String publisher;
 
     public Textbook(String title, String author, String publisher){
-        setTitle(title);
-        setPublisher(publisher);
-        setAuthor(author);
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
     }
 
     public String getTextbookInfo(){
