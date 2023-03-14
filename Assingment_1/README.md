@@ -3,7 +3,8 @@
 
 Here is the structure of the Assignment 1 folder
 
-Please download the whole folder and run the Main.java 
+Please download the whole folder and run the Main.java.
+If you would like to see the sample output screenshots, please open the Screenshot_Outputs.docx in this folder
     
     ├── Aggregation
         ├── Course.java
@@ -26,6 +27,7 @@ Please download the whole folder and run the Main.java
         ├── Cargoship.java
         ├── CruiseShip.java
         ├── ShipDriver.java 
+    ├── Screenshot_Outputs.docx # open this file to check the output screenshots
     ├── Main.java     # run this program to show all the outputs of the 
                       # CourseDriver, EmployeeDriver, ShipDriver, and CourseDriver
     └── README.md
