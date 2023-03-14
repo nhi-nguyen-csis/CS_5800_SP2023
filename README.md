@@ -2,6 +2,8 @@
 
 
 Download the whole 'Assignment_1' folder to the local computer and run it.
+
+Here is the structure of the Assignment 1 folder
     
     ├── Aggregation
         ├── Course.java
