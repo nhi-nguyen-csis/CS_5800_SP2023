@@ -2,7 +2,7 @@
 
 
 Download the whole 'Assignment_1' folder to the local computer and run it.
-    .
+    
     ├── Aggregation
         ├── Course.java
         ├── Textbook.java
