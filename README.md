@@ -1,7 +1,7 @@
 # CS_5800_SP2023
 
 
-Download the whole 'Assignment_1' folder to the local computer and run it.
+Download the whole 'Assignment_1' folder to the local computer and run it on your local computer
 
 Here is the structure of the Assignment 1 folder
     
