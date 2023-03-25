@@ -8,12 +8,12 @@ It is the main class that runs all the other classes, including Pizza Builder, C
 
 Here is the structure of the Assignment 2 folder
 
-    ├── Question1 
+    ├── Question_1 
         ├── Pizza.java
         ├── PizzaDriver.java
         ├── PizzaStore.java
         ├── Toppings.java 
-    ├── Qestion 2 
+    ├── Qestion_2 
         ├── AirbusFactory.java
         ├── AirplaneFactory.java
         ├── BertramFactory.java
