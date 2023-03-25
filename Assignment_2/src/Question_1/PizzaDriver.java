@@ -10,13 +10,13 @@ public class PizzaDriver {
 
     public static void createDominoPizza(){
         PizzaStore smallDomino = new PizzaStore("Domino",
-                new Pizza_1.PizzaBuilder_1(3).
+                new Pizza.PizzaBuilder(3).
                         addChicken(true).
                         build());
         smallDomino.eat();
 
         PizzaStore largeDomino = new PizzaStore("Domino",
-                new Pizza_1.PizzaBuilder_1(9).
+                new Pizza.PizzaBuilder(9).
                         addSpicyPork(true).
                         addHamAndPineapple(true).
                         addMushrooms(true).build());
@@ -25,7 +25,7 @@ public class PizzaDriver {
 
     public static void createLittleCeasarsPizza(){
         PizzaStore smallLittleCeasars = new PizzaStore("Little Caesars",
-                new Pizza_1.PizzaBuilder_1(6).
+                new Pizza.PizzaBuilder(6).
                         addHam(true).
                         addHamAndPineapple(true).
                         addPeppers(true).
@@ -35,7 +35,7 @@ public class PizzaDriver {
         smallLittleCeasars.eat();
 
         PizzaStore largeLittleCeasars = new PizzaStore("Little Caesars",
-                new Pizza_1.PizzaBuilder_1(9).
+                new Pizza.PizzaBuilder(9).
                         addBeef(true).
                         addMushrooms(true).
                         addPeppers(true).
@@ -49,13 +49,13 @@ public class PizzaDriver {
 
     public static void createPizzaHut(){
         PizzaStore smallPizzaHut = new PizzaStore("Pizza Hut",
-                new Pizza_1.PizzaBuilder_1(3).
+                new Pizza.PizzaBuilder(3).
                         addPepperoni(true).
                         addSpinach(true).build());
         smallPizzaHut.eat();
 
         PizzaStore largePizzaHut = new PizzaStore("Pizza Hut",
-                new Pizza_1.PizzaBuilder_1(9).
+                new Pizza.PizzaBuilder(9).
                         addBacon(true).
                         addMushrooms(true).
                         addOnions(true).build());

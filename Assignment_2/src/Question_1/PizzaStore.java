@@ -2,15 +2,15 @@ package Question_1;
 
 public class PizzaStore {
     String storeName;
-    Pizza_1 pizza1;
+    Pizza pizza;
 
-    public PizzaStore(String storeName, Pizza_1 pizza) {
+    public PizzaStore(String storeName, Pizza pizza) {
         this.storeName = storeName;
-        this.pizza1 = pizza;
+        this.pizza = pizza;
     }
 
     public void eat(){
         System.out.println("Welcome to " + storeName);
-        this.pizza1.info();
+        this.pizza.info();
     }
 }

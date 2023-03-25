@@ -1,8 +1,8 @@
 package Question_1;
 
 public abstract class Toppings {
-    boolean pepperoni;
-    boolean saussage;
+     boolean pepperoni;
+     boolean saussage;
      boolean mushrooms;
      boolean bacon;
      boolean onions;
