@@ -1,5 +1,9 @@
+import Bridge.MessagingDriver;
+import Decorator.BurgerDriver;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        MessagingDriver.run();
+        BurgerDriver.run();
     }
 }

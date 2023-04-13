@@ -1,7 +1,7 @@
 package Decorator;
 
-public class BurgerShopDriver {
-    public static void main(String[] args) {
+public class BurgerDriver {
+    public static void run() {
         showMenu();
         Order customerOrder1 = new Order("#1");
         customerOrder1.addItem(new Mushrooms(new CheeseBurger()));
@@ -21,7 +21,7 @@ public class BurgerShopDriver {
     }
 
     public static void showMenu(){
-        System.out.println("Welcome to In & Out Burger Shop!");
+        System.out.println("\nWelcome to In & Out Burger Shop!");
         System.out.println("-------- Burgers & Fries Menu -------");
         System.out.printf("\tHamburger: $%.2f%n", Hamburger.COST);
         System.out.printf("\tCheese Burger: $%.2f%n", CheeseBurger.COST);

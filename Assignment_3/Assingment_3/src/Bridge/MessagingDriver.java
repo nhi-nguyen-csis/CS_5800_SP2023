@@ -1,15 +1,19 @@
 package Bridge;
 
-public class Driver {
-    public static void main(String[] args) {
+public class MessagingDriver {
+    public static void run() {
         WhatsAppMessagingApp whatsApp = new WhatsAppMessagingApp("WhatsApp", new Text());
         whatsApp.send();
         whatsApp = new WhatsAppMessagingApp("WhatsApp", new Image());
         whatsApp.send();
+        whatsApp = new WhatsAppMessagingApp("WhatsApp", new Video());
+        whatsApp.send();
 
-        FacebookMessagingApp facebook = new FacebookMessagingApp("Facebook", new Video());
+        FacebookMessagingApp facebook = new FacebookMessagingApp("Facebook", new Image());
         facebook.send();
-        facebook = new FacebookMessagingApp("Facebook", new Image());
+        facebook = new FacebookMessagingApp("Facebook", new Video());
+        facebook.send();
+        facebook = new FacebookMessagingApp("Facebook", new Text());
         facebook.send();
 
         TelegramMessagingApp telegram = new TelegramMessagingApp("Telegram", new Text());
