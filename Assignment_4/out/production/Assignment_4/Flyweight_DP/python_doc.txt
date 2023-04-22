@@ -1,6 +1,6 @@
-P, Arial, 14, Back
-y, Arial, 12, Back
-t, Arial, 12, Blue
-h, Times New Roman, 14, Back
-o, Arial, 12, Back
-n, Times New Roman, 14, Back
+P, Times New Roman, 12, Blue
+y, Arial, 14, Blue
+t, Arial, 14, Back
+h, Times New Roman, 12, Blue
+o, Times New Roman, 14, Back
+n, Arial, 14, Blue

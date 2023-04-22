@@ -1,7 +1,5 @@
 package Proxy_dp;
 
-import java.util.List;
-
 public class SongProxy implements Searchable {
     private Searchable searchable;
 

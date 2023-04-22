@@ -18,24 +18,9 @@ public class Driver {
         textEditor.create(createTexts("Python"));
         textEditor.save(filePath + "python_doc.txt");
 
-        // --------------------- Edit text file ------------------
         String fileName = filePath + "doc.txt";
-        textEditor.edit(fileName, createTexts("HelloWorldCS5800"));
+        textEditor.edit(filePath + "doc.txt", createTexts("HelloWorldCS5800"));
         textEditor.save(fileName);
-
-//        TextEditor textEditor = new TextEditor();
-//        textEditor.create(createTexts("Java"));
-//        textEditor.save(filePath + "java_doc.txt");
-//
-//        TextEditor textEditor2 = new TextEditor();
-//        textEditor2.create(createTexts("Python"));
-//        textEditor2.save(filePath + "python_doc.txt");
-//
-//        // --------------------- Edit the test.txt file ------------------
-//        TextEditor textEditor3 = new TextEditor();
-//        String fileName = filePath + "java_doc.txt";
-//        textEditor3.edit(fileName, createTexts("HelloWorldCS5800"));
-//        textEditor3.save(fileName);
     }
 
     public static List<Text> createTexts(String words){
