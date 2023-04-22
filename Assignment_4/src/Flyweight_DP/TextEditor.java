@@ -1,35 +1,51 @@
 package Flyweight_DP;
 
-public class TextEditor implements TextEditable {
-    private String text;
-    private String font;
-    private int fontSize;
-    private String color;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
 
-    public TextEditor(){};
+public class TextEditor implements Editable {
+    private List<Text> text;
 
-    public TextEditor(String font, int fontSize, String color) {
-        this.font = font;
-        this.fontSize = fontSize;
-        this.color = color;
-    }
-
-    @Override
-    public void create(String text) {
+    public void create(List<Text> text) {
         this.text = text;
     }
 
-
     @Override
-    public void edit(TextEditor textEditor, String newText){
-        System.out.printf("Editing the original text '%s' to '%s'%n", textEditor.text, newText);
-        textEditor.text = newText;
+    public void edit(String fileName, List<Text> documentText) {
+        try {
+            File file = new File(fileName);
+            if (!file.exists()) {
+                throw new IOException("File not found: " + fileName);
+            }
+            FileWriter writer = new FileWriter(file);
+            for(Text text : documentText) {
+                writer.write(text.getText() + "\n");
+            }
+            writer.close();
+            this.text = documentText;
+            System.out.println("File edited successfully!");
+        } catch (IOException e) {
+            System.out.println("An error occurred while editing the file.");
+            e.printStackTrace();
+        }
     }
 
+
     @Override
-    public void save() {
-        System.out.printf("Saving the text '%s' with font %s, " +
-                "font size %d, and color %s%n%n", text, font, fontSize, color);
+    public void save(String fileName) {
+        try {
+            FileWriter writer = new FileWriter(fileName);
+            for(int i = 0; i < text.size(); i++) {
+                writer.write(text.get(i).getText() + "\n");
+            }
+            writer.close();
+            System.out.println("Successfully save to the file " + fileName);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }
 

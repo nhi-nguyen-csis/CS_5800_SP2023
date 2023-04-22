@@ -1,29 +1,28 @@
 package Proxy_dp;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class SongProxy implements SongService {
-    private SongService songService;
+public class SongProxy implements Searchable {
+    private Searchable searchable;
 
-    public Song searchById(Integer songId) {
-        if (songService == null) {
-            songService = new Song();
+    public void searchById(Integer songId) {
+        if (searchable == null) {
+            searchable = new Song();
         }
-        return songService.searchById(songId);
+        searchable.searchById(songId);
     }
 
-    public List<Song> searchByTitle(String title) {
-        if (songService == null) {
-            songService = new Song();
+    public void searchByTitle(String title) {
+        if (searchable == null) {
+            searchable = new Song();
         }
-        return songService.searchByTitle(title);
+        searchable.searchByTitle(title);
     }
 
-    public List<Song> searchByAlbum(String album) {
-        if (songService == null) {
-            songService = new Song();
+    public void searchByAlbum(String album) {
+        if (searchable == null) {
+            searchable = new Song();
         }
-        return songService.searchByAlbum(album);
+        searchable.searchByAlbum(album);
     }
 }

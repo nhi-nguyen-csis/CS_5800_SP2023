@@ -1,0 +1,16 @@
+H, Arial, 14, Blue
+e, Arial, 12, Back
+l, Times New Roman, 12, Back
+l, Times New Roman, 14, Blue
+o, Times New Roman, 14, Blue
+W, Times New Roman, 14, Blue
+o, Times New Roman, 12, Back
+r, Arial, 14, Blue
+l, Arial, 14, Blue
+d, Arial, 14, Back
+C, Times New Roman, 14, Blue
+S, Arial, 12, Back
+5, Times New Roman, 14, Blue
+8, Times New Roman, 14, Blue
+0, Arial, 12, Blue
+0, Times New Roman, 14, Blue
