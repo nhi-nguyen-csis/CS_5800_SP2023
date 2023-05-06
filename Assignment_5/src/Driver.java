@@ -1,5 +1,3 @@
-package Test;
-
 import java.util.Iterator;
 import java.util.List;
 
@@ -40,5 +38,7 @@ public class Driver {
         while (allMessagesIterator.hasNext()) {
             System.out.println(allMessagesIterator.next());
         }
+        chatServer.unregisterUser(twitter_ceo);
+        chatServer.sendMessage(new Message(facebook_ceo, List.of(twitter_ceo), "I want to open a new AI company, do you wanna join, Elon?"));
     }
 }

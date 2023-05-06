@@ -1,5 +1,3 @@
-package Test;
-
 public class MessageMememto {
     private Message message;
 

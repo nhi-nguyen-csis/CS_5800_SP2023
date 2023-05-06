@@ -1,5 +1,3 @@
-package Test;
-
 import java.util.Iterator;
 
 public class SearchMessagesByUser implements Iterator<Message> {

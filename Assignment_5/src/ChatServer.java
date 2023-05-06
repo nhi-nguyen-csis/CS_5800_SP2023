@@ -1,10 +1,8 @@
-package Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatServer { // Mediator class
-    private static List<User> users;
+public class ChatServer {
+    private List<User> users;
     
     public ChatServer(){
         users = new ArrayList<>();
@@ -13,11 +11,21 @@ public class ChatServer { // Mediator class
 
     public void sendMessage(Message message){
         User sender = message.getSender();
+        List<User> receivers = new ArrayList<>(message.getReceivers());
         if(!users.contains(sender)){
-            System.out.printf("User %s is not registered\n", sender.getUsername());
+            System.out.printf("Cannot send message as user %s is not registered\n", sender.getUsername());
             return;
         }
-        for (User receiver : message.getReceivers()){
+        List<User> validReceivers = new ArrayList<>();
+        for (User user : receivers){
+            if (!users.contains(user)){
+                System.out.printf("Cannot send message from %s to %s as user %s is not registered\n", sender.getUsername(), user.getUsername(), user.getUsername());
+            }
+            else {
+                validReceivers.add(user);
+            }
+        }
+        for (User receiver : validReceivers){
             List<User> blockedAccounts = receiver.getBlockedUsers();
             if (blockedAccounts != null && blockedAccounts.contains(sender)){
                 System.out.println("Cannot send message from " + sender.getUsername() + " to " + receiver.getUsername() +
@@ -32,7 +40,6 @@ public class ChatServer { // Mediator class
         }
     }
 
-
     public void registerUser(User user) {
         users.add(user);
         System.out.printf("Successfully registered user %s\n", user.getUsername());
@@ -40,6 +47,7 @@ public class ChatServer { // Mediator class
 
     public void unregisterUser(User user) {
         users.remove(user);
+        System.out.printf("Unregistered user %s\n", user.getUsername());
     }
 
     public void undoLastMessage(User user){
