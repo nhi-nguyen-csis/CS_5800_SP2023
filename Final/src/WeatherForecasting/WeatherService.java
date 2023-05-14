@@ -1,2 +1,5 @@
-package WeatherForecasting;public class WeatherService {
+package WeatherForecasting;
+
+public interface WeatherService {
+    WeatherData getWeatherData();
 }

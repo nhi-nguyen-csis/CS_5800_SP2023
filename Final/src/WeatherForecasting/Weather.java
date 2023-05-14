@@ -3,18 +3,16 @@ package WeatherForecasting;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class WeatherApp {
-    private WeatherService weatherService;
-    private List<User> observers = new ArrayList<>();
+public abstract class Weather {
+    WeatherData weatherData;
+    WeatherService weatherService;
+    List<User> observers;
 
-    public void subscribe(User user) {
-        observers.add(user);
-    }
+    abstract void subscribe(User user);
 
-    public void unsubscribe(User user) {
-        observers.remove(user);
-    }
+    abstract void unsubscribe(User user);
 
-    public abstract void notifyObservers() {}
+    abstract void notifyObservers();
 
+    abstract void display();
 }
